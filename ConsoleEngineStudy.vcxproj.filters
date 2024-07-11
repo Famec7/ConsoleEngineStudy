@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="0Default">
+      <UniqueIdentifier>{f92c085f-f791-45ff-a2eb-ad6061acc75d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1ConsoleEx3">
+      <UniqueIdentifier>{1d0438e4-f089-427b-9caf-52902473b9e4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>0Default</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleEx3\SysTimer.cpp">
+      <Filter>1ConsoleEx3</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleEx3\ConWrap.cpp">
+      <Filter>1ConsoleEx3</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ConsoleEx3\ConWrap.h">
+      <Filter>1ConsoleEx3</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleEx3\ConWrapColors.h">
+      <Filter>1ConsoleEx3</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleEx3\ConWrapDefines.h">
+      <Filter>1ConsoleEx3</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleEx3\SysTimer.h">
+      <Filter>1ConsoleEx3</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ConsoleEx3\conwrapex3_0301262300.chm">
+      <Filter>1ConsoleEx3</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ConsoleEx3\개발일지.txt">
+      <Filter>1ConsoleEx3</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
