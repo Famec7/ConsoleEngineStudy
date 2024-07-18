@@ -7,6 +7,30 @@
     <Filter Include="1ConsoleEx3">
       <UniqueIdentifier>{1d0438e4-f089-427b-9caf-52902473b9e4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="2Engine">
+      <UniqueIdentifier>{99a12ef7-edd6-4376-a88a-d79b0aa41639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2Engine\Singleton">
+      <UniqueIdentifier>{1bf3d186-394a-49d1-bcfe-0709dc958132}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2Engine\Director">
+      <UniqueIdentifier>{a737006c-7232-4045-96b7-318f58de885a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2Engine\Scene">
+      <UniqueIdentifier>{5f5495b0-bb02-48cd-83e1-55921571fcb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3Game">
+      <UniqueIdentifier>{080b7eb9-866c-4640-8ff3-b5968eb09e59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3Game\MainScene">
+      <UniqueIdentifier>{ef0a9d38-44e7-435b-a5e9-10506baccf12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3Game\GameScene">
+      <UniqueIdentifier>{a471fea3-e4c0-453a-ad77-7380973b0c1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2Engine\GameObject">
+      <UniqueIdentifier>{e8a63644-b640-4991-b8d4-e9fa8a2e4cad}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -17,6 +41,24 @@
     </ClCompile>
     <ClCompile Include="ConsoleEx3\ConWrap.cpp">
       <Filter>1ConsoleEx3</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Singleton.cpp">
+      <Filter>2Engine\Singleton</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Director.cpp">
+      <Filter>2Engine\Director</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Scene.cpp">
+      <Filter>2Engine\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Scene\MainScene.cpp">
+      <Filter>3Game\MainScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Scene\GameScene.cpp">
+      <Filter>3Game\GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\GameObject.cpp">
+      <Filter>2Engine\GameObject</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -31,6 +73,24 @@
     </ClInclude>
     <ClInclude Include="ConsoleEx3\SysTimer.h">
       <Filter>1ConsoleEx3</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Singleton.h">
+      <Filter>2Engine\Singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Director.h">
+      <Filter>2Engine\Director</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Scene.h">
+      <Filter>2Engine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Scene\MainScene.h">
+      <Filter>3Game\MainScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Scene\GameScene.h">
+      <Filter>3Game\GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\GameObject.h">
+      <Filter>2Engine\GameObject</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
