@@ -22,14 +22,23 @@
     <Filter Include="3Game">
       <UniqueIdentifier>{080b7eb9-866c-4640-8ff3-b5968eb09e59}</UniqueIdentifier>
     </Filter>
-    <Filter Include="3Game\MainScene">
-      <UniqueIdentifier>{ef0a9d38-44e7-435b-a5e9-10506baccf12}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="3Game\GameScene">
-      <UniqueIdentifier>{a471fea3-e4c0-453a-ad77-7380973b0c1e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="2Engine\GameObject">
       <UniqueIdentifier>{e8a63644-b640-4991-b8d4-e9fa8a2e4cad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2Engine\Component">
+      <UniqueIdentifier>{9c8545e1-2590-4bec-a21f-4708b6c7a0d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3Game\Components">
+      <UniqueIdentifier>{9b9a11eb-2de5-47ea-b2f0-433247704326}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3Game\Scene">
+      <UniqueIdentifier>{48f458e3-d84b-4ce0-bc80-e719b8cee896}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3Game\Scene\GameScene">
+      <UniqueIdentifier>{a471fea3-e4c0-453a-ad77-7380973b0c1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3Game\Scene\MainScene">
+      <UniqueIdentifier>{ef0a9d38-44e7-435b-a5e9-10506baccf12}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -52,13 +61,19 @@
       <Filter>2Engine\Scene</Filter>
     </ClCompile>
     <ClCompile Include="Game\Scene\MainScene.cpp">
-      <Filter>3Game\MainScene</Filter>
+      <Filter>3Game\Scene\MainScene</Filter>
     </ClCompile>
     <ClCompile Include="Game\Scene\GameScene.cpp">
-      <Filter>3Game\GameScene</Filter>
+      <Filter>3Game\Scene\GameScene</Filter>
     </ClCompile>
     <ClCompile Include="Engine\GameObject.cpp">
       <Filter>2Engine\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Component.cpp">
+      <Filter>2Engine\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Component\Transform.cpp">
+      <Filter>3Game\Components</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -84,13 +99,19 @@
       <Filter>2Engine\Scene</Filter>
     </ClInclude>
     <ClInclude Include="Game\Scene\MainScene.h">
-      <Filter>3Game\MainScene</Filter>
+      <Filter>3Game\Scene\MainScene</Filter>
     </ClInclude>
     <ClInclude Include="Game\Scene\GameScene.h">
-      <Filter>3Game\GameScene</Filter>
+      <Filter>3Game\Scene\GameScene</Filter>
     </ClInclude>
     <ClInclude Include="Engine\GameObject.h">
       <Filter>2Engine\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Component.h">
+      <Filter>2Engine\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Component\Transform.h">
+      <Filter>3Game\Components</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

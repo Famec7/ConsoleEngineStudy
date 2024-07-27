@@ -129,10 +129,12 @@
   <ItemGroup>
     <ClCompile Include="ConsoleEx3\ConWrap.cpp" />
     <ClCompile Include="ConsoleEx3\SysTimer.cpp" />
+    <ClCompile Include="Engine\Component.cpp" />
     <ClCompile Include="Engine\Director.cpp" />
     <ClCompile Include="Engine\GameObject.cpp" />
     <ClCompile Include="Engine\Scene.cpp" />
     <ClCompile Include="Engine\Singleton.cpp" />
+    <ClCompile Include="Game\Component\Transform.cpp" />
     <ClCompile Include="Game\Scene\GameScene.cpp" />
     <ClCompile Include="Game\Scene\MainScene.cpp" />
     <ClCompile Include="main.cpp" />
@@ -142,10 +144,12 @@
     <ClInclude Include="ConsoleEx3\ConWrapColors.h" />
     <ClInclude Include="ConsoleEx3\ConWrapDefines.h" />
     <ClInclude Include="ConsoleEx3\SysTimer.h" />
+    <ClInclude Include="Engine\Component.h" />
     <ClInclude Include="Engine\Director.h" />
     <ClInclude Include="Engine\GameObject.h" />
     <ClInclude Include="Engine\Scene.h" />
     <ClInclude Include="Engine\Singleton.h" />
+    <ClInclude Include="Game\Component\Transform.h" />
     <ClInclude Include="Game\Scene\GameScene.h" />
     <ClInclude Include="Game\Scene\MainScene.h" />
   </ItemGroup>
