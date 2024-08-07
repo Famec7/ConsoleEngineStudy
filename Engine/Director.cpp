@@ -27,7 +27,10 @@ void Director::Update(void)
 
 void Director::Render(void)
 {
-
+	if (_currentScene != nullptr)
+	{
+		_currentScene->Render();
+	}
 }
 
 void Director::Exit(void)

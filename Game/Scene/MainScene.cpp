@@ -4,26 +4,23 @@
 #include "MainScene.h"
 #include "GameScene.h"
 
+#include "../Component/Renderer.h"
+
 void MainScene::Initialize(void)
 {
-	obj = new GameObject();
-
-	obj->AddComponent<Transform>();
-	obj->GetComponent<Transform>().x = 5.0f;
-	obj->GetComponent<Transform>().y = 10.0f;
+	Scene::Initialize();
 }
 
 void MainScene::Update(void)
 {
+	Scene::Update();
 	ClearScreenEx3(CYAN);
-
-	DrawStrEx3(obj->GetComponent<Transform>().x, obj->GetComponent<Transform>().y, "A", YELLOW, BLACK);
-
+	
 	if (IsKey(VK_2))
-		Director::GetInstance()->ChangeScene(new GameScene());
+		Director::GetInstance()->ChangeScene(new GameScene);
 }
 
 void MainScene::Exit(void)
 {
-
+	Scene::Exit();
 }

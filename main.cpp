@@ -4,6 +4,7 @@
 
 #include "Engine/Director.h"
 #include "Game/Scene/MainScene.h"
+#include "Game/Scene/GameScene.h"
 
 int main()
 {
@@ -15,12 +16,12 @@ int main()
 	Director* director = Director::GetInstance();
 
 	director->Initialize();
-	director->ChangeScene(new MainScene());
+	director->ChangeScene(new GameScene);
 
 	while (true)
 	{
 		CheckInput();
-		ClearScreenEx3(BLACK);
+		ClearScreenEx3(WHITE);
 
 		director->Update();
 		director->Render();

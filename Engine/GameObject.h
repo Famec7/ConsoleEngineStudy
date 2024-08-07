@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Component.h"
+#include "../Game/Component/Transform.h"
 
 #include <iostream>
 #include <list>
@@ -8,8 +9,14 @@
 class GameObject
 {
 public:
-	void Initialize();
-	void Update();
+	Transform* transform;
+	bool IsActive;
+
+public:
+	virtual void Initialize();
+	virtual void Update();
+	virtual void Render();
+	virtual void Exit();
 
 public:
 	std::list<Component*> components;
@@ -21,7 +28,7 @@ public:
 	T& GetComponent();
 
 public:
-	GameObject() = default;
+	GameObject();
 	virtual ~GameObject() = default;
 };
 
@@ -32,6 +39,8 @@ inline T& GameObject::AddComponent()
 	Component* pComponent = static_cast<Component*>(newComponent);
 
 	pComponent->Initialize();
+	pComponent->transform = transform;
+	pComponent->gameObject = this;
 
 	components.push_back(pComponent);
 	return *newComponent;

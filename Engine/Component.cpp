@@ -11,3 +11,7 @@ void Component::Update(void)
 void Component::Render(void)
 {
 }
+
+void Component::Exit(void)
+{
+}

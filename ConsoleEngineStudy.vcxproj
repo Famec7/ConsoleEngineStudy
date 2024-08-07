@@ -134,6 +134,9 @@
     <ClCompile Include="Engine\GameObject.cpp" />
     <ClCompile Include="Engine\Scene.cpp" />
     <ClCompile Include="Engine\Singleton.cpp" />
+    <ClCompile Include="Game\Component\Bullet.cpp" />
+    <ClCompile Include="Game\Component\PlayerController.cpp" />
+    <ClCompile Include="Game\Component\Renderer.cpp" />
     <ClCompile Include="Game\Component\Transform.cpp" />
     <ClCompile Include="Game\Scene\GameScene.cpp" />
     <ClCompile Include="Game\Scene\MainScene.cpp" />
@@ -149,6 +152,9 @@
     <ClInclude Include="Engine\GameObject.h" />
     <ClInclude Include="Engine\Scene.h" />
     <ClInclude Include="Engine\Singleton.h" />
+    <ClInclude Include="Game\Component\Bullet.h" />
+    <ClInclude Include="Game\Component\PlayerController.h" />
+    <ClInclude Include="Game\Component\Renderer.h" />
     <ClInclude Include="Game\Component\Transform.h" />
     <ClInclude Include="Game\Scene\GameScene.h" />
     <ClInclude Include="Game\Scene\MainScene.h" />

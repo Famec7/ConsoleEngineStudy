@@ -10,6 +10,7 @@ private:
 
 public:
 	void ChangeScene(Scene* newScene);
+	Scene* GetCurrentScene(void) const { return _currentScene; }
 
 public:
 	void Initialize(void);

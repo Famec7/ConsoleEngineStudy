@@ -75,6 +75,15 @@
     <ClCompile Include="Game\Component\Transform.cpp">
       <Filter>3Game\Components</Filter>
     </ClCompile>
+    <ClCompile Include="Game\Component\Renderer.cpp">
+      <Filter>3Game\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Component\PlayerController.cpp">
+      <Filter>3Game\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Component\Bullet.cpp">
+      <Filter>3Game\Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConsoleEx3\ConWrap.h">
@@ -111,6 +120,15 @@
       <Filter>2Engine\Component</Filter>
     </ClInclude>
     <ClInclude Include="Game\Component\Transform.h">
+      <Filter>3Game\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Component\Renderer.h">
+      <Filter>3Game\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Component\Bullet.h">
+      <Filter>3Game\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Component\PlayerController.h">
       <Filter>3Game\Components</Filter>
     </ClInclude>
   </ItemGroup>

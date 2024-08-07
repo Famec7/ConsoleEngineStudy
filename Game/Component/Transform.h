@@ -1,14 +1,11 @@
 #pragma once
 
-#include "../../Engine/Component.h"
-
-class Transform : public Component
+class Transform
 {
 public:
 	float x = 0.0f;
 	float y = 0.0f;
-	
-	void Initialize(void) override;
-	void Update(void) override;
-	void Render(void) override;
+
+	Transform() : x(0.0f), y(0.0f) {}
+	~Transform() = default;
 };

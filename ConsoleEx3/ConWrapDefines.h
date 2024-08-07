@@ -16,8 +16,8 @@
 /////////////////////////////////////////////////
 //
 
-#define CON_W		150
-#define CON_H		40
+#define CON_W		40
+#define CON_H		20
 
 #define SCROLL_POS	24
 

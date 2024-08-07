@@ -1,11 +1,18 @@
 #pragma once
 
+#include "GameObject.h"
+#include <list>
+
 class Scene
 {
 public:
-	virtual void Initialize(void) = 0;
-	virtual void Update(void) = 0;
-	virtual void Exit(void) = 0;
+	std::list<GameObject*> hierarchy;
+
+public:
+	virtual void Initialize(void);
+	virtual void Update(void);
+	virtual void Render(void);
+	virtual void Exit(void);
 
 public:
 	Scene() = default;
