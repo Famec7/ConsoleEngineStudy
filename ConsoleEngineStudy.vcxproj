@@ -135,11 +135,13 @@
     <ClCompile Include="Engine\Scene.cpp" />
     <ClCompile Include="Engine\Singleton.cpp" />
     <ClCompile Include="Game\Component\Bullet.cpp" />
+    <ClCompile Include="Game\Component\MonsterController.cpp" />
     <ClCompile Include="Game\Component\PlayerController.cpp" />
     <ClCompile Include="Game\Component\Renderer.cpp" />
     <ClCompile Include="Game\Component\Transform.cpp" />
     <ClCompile Include="Game\Scene\GameScene.cpp" />
     <ClCompile Include="Game\Scene\MainScene.cpp" />
+    <ClCompile Include="Game\Utility\CollisionManager.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -153,11 +155,13 @@
     <ClInclude Include="Engine\Scene.h" />
     <ClInclude Include="Engine\Singleton.h" />
     <ClInclude Include="Game\Component\Bullet.h" />
+    <ClInclude Include="Game\Component\MonsterController.h" />
     <ClInclude Include="Game\Component\PlayerController.h" />
     <ClInclude Include="Game\Component\Renderer.h" />
     <ClInclude Include="Game\Component\Transform.h" />
     <ClInclude Include="Game\Scene\GameScene.h" />
     <ClInclude Include="Game\Scene\MainScene.h" />
+    <ClInclude Include="Game\Utility\CollisionManager.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ConsoleEx3\conwrapex3_0301262300.chm" />

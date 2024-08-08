@@ -6,12 +6,12 @@
 class Renderer : public Component
 {
 public:
-	std::string text;
+	std::string* text;
 
 	DWORD fontColor;
 	DWORD backColor;
 
-	virtual void Init();
+	virtual void Initialize();
 	virtual void Update();
 	virtual void Render();
 	virtual void Exit();

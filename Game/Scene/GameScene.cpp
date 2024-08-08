@@ -3,59 +3,122 @@
 
 #include "../Component/Renderer.h"
 #include "../Component/PlayerController.h"
+#include "../Component/MonsterController.h"
 #include "../Component/Bullet.h"
+
+#include "../Utility/CollisionManager.h"
 
 #include "GameScene.h"
 #include "MainScene.h"
 
+#pragma warning(disable:4996)
+
 void GameScene::Initialize(void)
 {
 	Scene::Initialize();
-	
+
 	player = new GameObject();
 
-	player->AddComponent<Renderer>();
-	player->GetComponent<Renderer>().text = "■";
-	player->GetComponent<Renderer>().fontColor = WHITE;
+	player->AddComponent<Renderer>().text->assign("■");
+
 	player->AddComponent<PlayerController>();
 
 	player->transform->x = CON_W / 4;
 	player->transform->y = CON_H / 4;
 
-	for (int i = 0; i < 100; i++)
+	for (auto& bullet : bullets)
 	{
-		bullet[i] = new GameObject();
+		bullet = new GameObject();
 
-		bullet[i]->AddComponent<Renderer>();
-		bullet[i]->GetComponent<Renderer>().text = "**";
-		bullet[i]->GetComponent<Renderer>().fontColor = YELLOW;
-		bullet[i]->AddComponent<Bullet>();
-		bullet[i]->IsActive = false;
+		bullet->AddComponent<Renderer>().text->assign("**");
+
+		bullet->AddComponent<Bullet>();
+		bullet->IsActive = false;
+	}
+
+	for (auto& monster : monsters)
+	{
+		monster = new GameObject();
+
+		monster->AddComponent<Renderer>().text->assign("◈");
+		monster->AddComponent<MonsterController>();
+
+		monster->IsActive = false;
 	}
 }
 
 void GameScene::Update(void)
 {
 	Scene::Update();
-	ClearScreenEx3(LIGHTRED);
+	ClearScreenEx3(WHITE);
 
-	if (IsKey(VK_Z))
+	for (const auto& monster : monsters)
 	{
-		for (int i = 0; i < 100; i++)
+		if (CollisionManager::PointVSPoint(player, monster))
 		{
-			if (not bullet[i]->IsActive)
+			Director::GetInstance()->ExitGame();
+			return;
+		}
+
+		for (const auto& bullet : bullets)
+		{
+			if (CollisionManager::PointVSPoint(bullet, monster))
 			{
-				bullet[i]->GetComponent<Bullet>().Spawn(player->transform->x, player->transform->y);
+				_gameScore += 20;
+
+				monster->IsActive = false;
+				bullet->IsActive = false;
+			}
+		}
+	}
+
+	if (GetTickCount64() - _tickMonsterSpawnTime > 1000)
+	{
+		for (const auto& monster : monsters)
+		{
+			if (not monster->IsActive)
+			{
+				auto spawnPostionX = (rand() % (CON_W / 2)) * 2;
+				monster->GetComponent<MonsterController>().Spawn(spawnPostionX, 0);
+
+				_tickMonsterSpawnTime = GetTickCount64();
 				break;
 			}
 		}
 	}
 
-	if(IsKey(VK_1))
+	if (GetTickCount64() - _tickBulletSpawnTime > 200)
+	{
+		if (IsKey(VK_Z))
+		{
+				for (int i = 0; i < 100; i++)
+				{
+					if (not bullets[i]->IsActive)
+					{
+						bullets[i]->GetComponent<Bullet>().Spawn(player->transform->x, player->transform->y);
+
+						_tickBulletSpawnTime = GetTickCount64();
+						break;
+					}
+			}
+		}
+	}
+
+	if (IsKey(VK_1))
 		Director::GetInstance()->ChangeScene(new MainScene);
+
+	DrawUI();
 }
 
 void GameScene::Exit(void)
 {
 	Scene::Exit();
+}
+
+void GameScene::DrawUI(void)
+{
+	char _strBuffer[100];
+
+	sprintf(_strBuffer, "Score : %d", _gameScore);
+	DrawStrEx3(0, 0, _strBuffer, YELLOW, BLACK);
 }

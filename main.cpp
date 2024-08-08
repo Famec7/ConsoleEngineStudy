@@ -18,7 +18,7 @@ int main()
 	director->Initialize();
 	director->ChangeScene(new GameScene);
 
-	while (true)
+	while (director->IsGameloop())
 	{
 		CheckInput();
 		ClearScreenEx3(WHITE);

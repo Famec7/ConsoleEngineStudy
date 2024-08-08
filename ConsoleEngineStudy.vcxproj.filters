@@ -40,6 +40,12 @@
     <Filter Include="3Game\Scene\MainScene">
       <UniqueIdentifier>{ef0a9d38-44e7-435b-a5e9-10506baccf12}</UniqueIdentifier>
     </Filter>
+    <Filter Include="3Game\Utility">
+      <UniqueIdentifier>{32cd7c72-39a1-48b2-8c1c-7f6ed1c001c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3Game\Utility\CollisionManager">
+      <UniqueIdentifier>{01a30565-54ee-4ea3-a496-c826388c524e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -83,6 +89,12 @@
     </ClCompile>
     <ClCompile Include="Game\Component\Bullet.cpp">
       <Filter>3Game\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Component\MonsterController.cpp">
+      <Filter>3Game\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Utility\CollisionManager.cpp">
+      <Filter>3Game\Utility\CollisionManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +142,12 @@
     </ClInclude>
     <ClInclude Include="Game\Component\PlayerController.h">
       <Filter>3Game\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Component\MonsterController.h">
+      <Filter>3Game\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Utility\CollisionManager.h">
+      <Filter>3Game\Utility\CollisionManager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

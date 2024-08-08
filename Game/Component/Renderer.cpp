@@ -1,9 +1,9 @@
 ﻿#include "../../ConsoleEx3/ConWrap.h"
 #include "Renderer.h"
 
-void Renderer::Init()
+void Renderer::Initialize()
 {
-	text = "";
+	text = new std::string();
 
 	fontColor = WHITE;
 	backColor = BLACK;
@@ -15,11 +15,11 @@ void Renderer::Update()
 
 void Renderer::Render()
 {
-	DrawStrEx3(transform->x, transform->y, text.c_str(), fontColor, backColor);
+	DrawStrEx3(transform->x, transform->y, text->c_str(), fontColor, backColor);
 }
 
 void Renderer::Exit()
 {
-	text.clear();
-	text.empty();
+	delete text;
+	text = nullptr;
 }

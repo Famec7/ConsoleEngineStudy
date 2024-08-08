@@ -7,9 +7,13 @@ class Director : public Singleton<Director>
 {
 private:
 	Scene* _currentScene = nullptr;
+	bool _gameloop = true;
 
 public:
-	void ChangeScene(Scene* newScene);
+	void ChangeScene(Scene * newScene);
+	void ExitGame(void) {_gameloop = false;}
+
+	bool IsGameloop(void) const { return _gameloop; }
 	Scene* GetCurrentScene(void) const { return _currentScene; }
 
 public:
